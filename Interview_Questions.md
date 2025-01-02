@@ -18,3 +18,15 @@ React is a JavaScript library for building user interfaces. It is maintained by 
 ## 4. Difference Between Real DOM and Virtual DOM
 - **Real DOM**: The Real DOM updates the entire tree structure of HTML tags, which can be slow and inefficient for large applications.
 - **Virtual DOM**: The Virtual DOM is a lightweight copy of the Real DOM. React uses the Virtual DOM to batch updates and apply them efficiently, improving performance.
+
+## 5
+. What is Hooks in React?
+- **Hook in React** is a **special function** that lets you **use React features (like state or side effects) in functional components** without needing to write a class.  
+
+- Think of it as a **toolbox for functional components** to make them more powerful and capable.  
+
+For example:  
+- `useState` lets you **add state** to a component.  
+- `useEffect` lets you **run code when the component renders or updates**.  
+
+Hooks **always start with "use"** (e.g., `useState`, `useEffect`).  
