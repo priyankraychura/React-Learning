@@ -1,0 +1,24 @@
+.counters {
+  margin-top: 150px;
+  width: 100%;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.counter-card {
+  height: 400px;
+  width: 300px;
+  background-color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+  border-radius: 50px;
+}
+
+.center-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
