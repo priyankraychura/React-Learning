@@ -20,7 +20,7 @@ React is a JavaScript library for building user interfaces. It is maintained by 
 - **Virtual DOM**: The Virtual DOM is a lightweight copy of the Real DOM. React uses the Virtual DOM to batch updates and apply them efficiently, improving performance.
 
 ## 5
-. What is Hooks in React?
+. What is Hooks and why used in React?
 - **Hook in React** is a **special function** that lets you **use React features (like state or side effects) in functional components** without needing to write a class.  
 
 - Think of it as a **toolbox for functional components** to make them more powerful and capable.  
@@ -30,3 +30,6 @@ For example:
 - `useEffect` lets you **run code when the component renders or updates**.  
 
 Hooks **always start with "use"** (e.g., `useState`, `useEffect`).  
+
+## 6. Which hook is used to manage state?
+- The useState hook is used to manage state in React functional components.
