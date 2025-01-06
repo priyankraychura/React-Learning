@@ -1,0 +1,48 @@
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loginPage, .signupPage {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 70px;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: #333333;
+}
+
+.btn-link {
+    cursor: pointer;
+    color: lightblue;
+    text-align: center;
+}
+
+label {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+input {
+    height: 40px;
+    width: 300px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    cursor: pointer;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    color: rgb(0, 123, 255);
+    background-color: lightblue;
+    margin-top: 40px;
+}
