@@ -1,10 +1,12 @@
+import FruitsAndVegetables from "./pages/FruitsAndVegetables"
 import Home from "./pages/Home"
 
 function App() {
 
   return (
     <>
-      <Home />
+      {/* <Home /> */}
+      <FruitsAndVegetables />
     </>
   )
 }

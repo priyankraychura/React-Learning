@@ -10,8 +10,8 @@ function Navbar() {
             <img src={primaryLogo} alt="" />
         </div>
         <div className="address">
-            <h2>Delivery in <span>13 Mins</span></h2>
-            <h5>Chhatrapati Shivaji Terminus Area, Fort... <i class="fa-solid fa-chevron-down"></i></h5>
+            <h3>Delivery in <span>13 Mins</span></h3>
+            <h5>Wadala West, Wadala, Mumbai, Mah... <i class="fa-solid fa-chevron-down"></i></h5>
         </div>
         <div className="search-bar">
             <i class="fa-solid fa-magnifying-glass"></i>

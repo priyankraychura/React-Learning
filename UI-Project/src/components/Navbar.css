@@ -1,6 +1,6 @@
 nav {
     height: 85px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 20px 64px;
     display: flex;
     justify-content: space-between;
@@ -9,12 +9,22 @@ nav {
 }
 
 nav .logo {
-
+    margin-top: 10px;
 }
 
 nav .address {
     width: 274px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+
+.address h3 {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.address h5 {
+    font-size: 13px;
+    font-weight: 600;
 }
 
 .address i {
@@ -23,10 +33,11 @@ nav .address {
 
 nav .search-bar {
     width: 873px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 12px 16px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-radius: 0.5rem;
     background-color: #FFFFFF;
 }
@@ -51,6 +62,15 @@ nav .search-bar {
     color: #374151;
 }
 
+.login .fa-user{
+    cursor: pointer;
+}
+
 .fa-user, .fa-cart-shopping{
-    font-size: 20px;
+    font-size: 17px;
+}
+
+.login span, .cart span{
+    font-size: 13px;
+    margin-top: 5px;
 }

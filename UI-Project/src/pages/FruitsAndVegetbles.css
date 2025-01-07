@@ -1,0 +1,67 @@
+.fandv-main {
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fandv-seaction {
+    width: 85%;
+    border: 1px solid red;
+    height: 100vh;
+}
+
+.fandv-filter {
+    width: 181px;
+    border: 1px solid green;
+    height: 100vh;
+    overflow: auto;
+}
+
+.fandv-filter::-webkit-scrollbar {
+    display: none;
+}
+
+.fandv-filter .filter-item {
+    cursor: pointer;
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+    align-items: center;
+    height: 60px;
+    border: 1px solid red;
+    padding: 8px 0 8px 8px;
+    margin-bottom: 8px;
+}
+
+.fandv-filter .filter-item:hover {
+    background-color: #F7E4FF;
+}
+
+.filter-item.active {
+    border-left: 3.5px solid #950EDB;
+    background-color: #F7E4FF;
+}
+
+.filter-item.active span {
+    font-weight: 600;
+    color: #950EDB;
+}
+
+.filter-item span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.filter-item .filter-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #F7F0FA;
+}
+
+.filter-img img {
+    width: 100%;
+}
