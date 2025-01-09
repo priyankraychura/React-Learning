@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import { Puff } from 'react-loader-spinner'
 
 function App() {
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState(null)
 
   useEffect(() => {
     fetch('https://dummyjson.com/products')
@@ -18,7 +19,7 @@ function App() {
       <header>
         <h1>Products</h1>
       </header>
-      <div className="main">
+      { products ? <div className="main">
         {
         products.map((el) => {
           return (
@@ -36,7 +37,19 @@ function App() {
           )
         })
       }
-      </div>
+      </div> :
+        <div className="main-loader">
+        <Puff
+          visible={true}
+          height="80"
+          width="80"
+          color="#4fa94d"
+          ariaLabel="puff-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+        />
+        </div>
+      }
     </>
   )
 }
