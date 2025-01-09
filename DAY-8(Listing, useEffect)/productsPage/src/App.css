@@ -6,7 +6,17 @@
 header {
   padding-left: 20px;
   padding-top: 20px;
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+header .fa-cart-shopping {
+  font-size: 25px;
+  cursor: pointer;
+}
+
 .main {
   height: 100vh;
   padding: 40px 20px;

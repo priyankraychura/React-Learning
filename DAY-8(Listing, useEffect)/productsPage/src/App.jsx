@@ -18,6 +18,7 @@ function App() {
     <>
       <header>
         <h1>Products</h1>
+        <i class="fa-solid fa-cart-shopping"></i>
       </header>
       { products ? <div className="main">
         {
