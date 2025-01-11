@@ -24,6 +24,12 @@ function LoginSignup() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        let isFormInvalid =  Object.values(isValid).some(value => value == false);
+        if(isFormInvalid) {
+            return;
+        }
+
         setUsers([...users, formData])
         setFormData({
             username: "",
@@ -31,6 +37,9 @@ function LoginSignup() {
             password: ""
         })
     }
+
+    console.log(users);
+    
 
     const handleBlur = (e) => {
        let username = /^[0-9A-Za-z]{6,16}$/;
@@ -46,24 +55,42 @@ function LoginSignup() {
     //     setIsValid({...isValid, [e.target.name]: false})
     //    }
 
-        if(e.target.name == "username") {
-            console.log("username");
-            if(!username.test(formData.username)) {
-                setIsValid({...isValid, [e.target.name]: false})
-            }
-        } else if (e.target.name == "email") {
-            console.log("email");
-            if(!emailRegex.test(formData.email)) {
-                setIsValid({...isValid, [e.target.name]: false})
-            }
-        } else if (e.target.name == "password") {
-            console.log("password");
-            if(!passwordRegex.test(formData.password)) {
-                setIsValid({...isValid, [e.target.name]: false})
-            }
-        }
-    }
+        // if(e.target.name == "username") {
+        //     console.log("username");
+        //     if(!username.test(formData.username)) {
+        //         setIsValid({...isValid, [e.target.name]: false})
+        //     }
+        // } else if (e.target.name == "email") {
+        //     console.log("email");
+        //     if(!emailRegex.test(formData.email)) {
+        //         setIsValid({...isValid, [e.target.name]: false})
+        //     }
+        // } else if (e.target.name == "password") {
+        //     console.log("password");
+        //     if(!passwordRegex.test(formData.password)) {
+        //         setIsValid({...isValid, [e.target.name]: false})
+        //     }
+        // }
 
+        const regexMap = {
+            username: /^[0-9A-Za-z]{6,16}$/,
+            email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+            password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,15}$/
+        };
+    
+        const fieldName = e.target.name;
+        const fieldValue = formData[fieldName];
+    
+        console.log(fieldName);
+        if (!regexMap[fieldName]?.test(fieldValue)) {
+            // setIsValid((prev) => ({ ...prev, [fieldName]: false }));
+            setIsValid({...isValid, [fieldName]: false})
+        }
+
+        
+    }
+    
+    console.log(isValid);
     const handleFocus = (e) => {
         setIsValid({...isValid, [e.target.name]: true})
     }
