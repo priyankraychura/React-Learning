@@ -1,0 +1,25 @@
+.otp-main {
+    min-height: 60vh;
+}
+.inputs {
+    display: flex;
+    gap: 5px;
+}
+.inputs input {
+    height: 40px;
+    width: 20px;
+    border-radius: 10px;
+    font-size: 22px;
+    border: none;
+    outline: none;
+    align-items: center;
+    padding-left: 10px;
+}
+.btn {
+    width: 220px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}

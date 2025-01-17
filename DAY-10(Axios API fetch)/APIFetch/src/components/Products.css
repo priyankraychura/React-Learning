@@ -1,0 +1,46 @@
+.add-main {
+    min-height: 90vh;
+    width: 100%;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.add-from {
+    width: 400px;
+    padding: 40px 30px;
+    background-color: #333333;
+    border-radius: 30px;
+}
+.add-from form{
+    display: flex;
+    flex-direction: column;
+}
+.add-from label {
+    margin-bottom: 5px;
+}
+.add-from input {
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+form .add-btn {
+    margin-top: 10px;
+    outline: none;
+    background-color: rgba(29, 43, 89, 0.666);
+}
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid white; */
+    margin-bottom: 20px;   
+}
+.top .show {
+    cursor: pointer;
+    color: rgb(69, 95, 225);
+}
