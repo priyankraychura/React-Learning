@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": "1f5d",
+      "name": "Priyank",
+      "email": "priyankrayachura@gmail.com",
+      "number": "9429042215",
+      "skills": [
+        "Reading",
+        "Drawing",
+        "Speaking"
+      ]
+    },
+    {
+      "id": "79e5",
+      "name": "Priyank",
+      "email": "priyankrayachura@gmail.com",
+      "number": "9429042215",
+      "skills": [
+        "Reading"
+      ]
+    },
+    {
+      "id": "2c0a",
+      "name": "Priyank",
+      "email": "priyankrayachura@gmail.com",
+      "number": "9429042215",
+      "skills": [
+        ""
+      ]
+    },
+    {
+      "id": "7960",
+      "name": "Priyank",
+      "email": "priyankrayachura@gmail.com",
+      "number": "9429042215",
+      "image": "https://images.mamaearth.in/catalog/product/3/_/3_78.jpg?format=auto&width=400&height=400",
+      "skills": [
+        "Reading",
+        "Drawing"
+      ]
+    }
+  ]
+}
