@@ -1,0 +1,102 @@
+.main {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    width: 400px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px;
+    background-color: #333333;
+    border-radius: 40px;
+}
+form h1 {
+    margin-bottom: 10px;
+}
+form label {
+    margin-bottom: 5px;
+}
+form input {
+    margin-bottom: 20px;
+    height: 35px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+}
+form .btn {
+    cursor: pointer;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(41, 51, 126, 0.625);
+}
+.main-card {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+}
+.card {
+    width: 200px;
+    height: 300px;
+    background-color: #333333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card .img {
+    position: relative;
+    height: 150px;
+}
+.card img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.card .details {
+    padding: 5px 10px;
+}
+.card .img .actions {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0;
+}
+.card:hover .fa-pencil, .card:hover .fa-xmark{
+    display: block;
+}
+.card:hover img{
+    filter: blur(5px);
+}
+.card .fa-pencil {
+    display: none;
+    cursor: pointer;
+    background-color: #333333;
+    color: #004085;
+    background-color: #CCE5FF;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    top: 5px;
+    transition: 0.1s;
+}
+.card .fa-xmark {
+    display: none;
+    cursor: pointer;
+    color: #721C24;
+    background-color: #F8D7DA;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    top: 5px;
+    transition: 0.1s;
+}

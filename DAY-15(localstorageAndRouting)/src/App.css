@@ -1,0 +1,22 @@
+nav {
+  height: 70px;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  background-color: #333333;
+}
+nav ul{
+  /* border: 1px solid white; */
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  margin-left: 50px;
+}
+nav ul li {
+  font-size: 18px;
+  cursor: pointer;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
