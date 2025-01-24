@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import 'font-awesome/css/font-awesome.min.css'
 
 const ShowProducts = () => {
@@ -21,12 +22,12 @@ const ShowProducts = () => {
       <div className="main-card">
       {
         products.map((el) => (
-            <div className="card">
+            <div className="card" key={el.id}>
               <div className="img">
                 <img src={el.img} alt="" />
                 <div className="actions">
-                  <i class="fa-solid fa-pencil"></i>
-                  <i class="fa-solid fa-xmark" onClick={(e) => handleDelete(e, el.id)}></i>
+                  <Link to={`/editProduct/${el.id}`}><i className="fa-solid fa-pencil"></i></Link>
+                  <i className="fa-solid fa-xmark" onClick={(e) => handleDelete(e, el.id)}></i>
                 </div>
               </div>
               <div className="details">
