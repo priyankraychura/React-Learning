@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "4e44",
+      "username": "priyankraychura",
+      "email": "priyankrayachura@gmail.com",
+      "number": "9429042215",
+      "password": "pr@12345"
+    },
+    {
+      "id": "3a31",
+      "username": "pruthvichauchan",
+      "email": "pruthvi@gmail.com",
+      "number": "6359467208",
+      "password": "pruthvi"
+    }
+  ]
+}

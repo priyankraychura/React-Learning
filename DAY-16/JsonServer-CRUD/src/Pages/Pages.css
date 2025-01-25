@@ -1,0 +1,92 @@
+.main-add {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    width: 400px;
+    padding: 40px;
+    background-color: #333333;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+}
+form .title {
+    margin-bottom: 10px;
+}
+form label{
+    margin-bottom: 5px;
+}
+form input {
+    height: 35px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+form .btns {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+form .cancel-btn {
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: rgba(131, 65, 65, 0.699);
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+form .add-btn {
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: rgb(65, 82, 131);;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+.main-table {
+    padding: 10px;
+}
+table {
+    width: 100%;
+    border: 1px solid rgb(65, 82, 131);;;
+    overflow: hidden;
+    border-radius: 10px;
+}
+table thead {
+    background-color: #333333;
+}
+table tr td {
+    padding: 5px 10px;
+    border-top: 1px solid grey;
+}
+
+table .actions{
+    display: flex;
+    gap: 10px;
+}
+table .action-btn {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: white;
+}
+table .dlt-btn {
+    background-color: rgba(131, 65, 65, 0.699);
+}
+table .edit-btn {
+    background-color: rgba(91, 131, 65, 0.699);
+}
+table .edit-btn a {
+    color: white;
+    text-decoration: none;
+}
