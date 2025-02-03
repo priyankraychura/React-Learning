@@ -1,0 +1,28 @@
+/* Customize the previous button */
+.slick-prev {
+    left: 40px;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid red; */
+}
+
+.slick-prev:before {
+    color: #F2F2F2;  /* Change arrow color */
+    font-size: 40px;
+  }
+  
+  /* Customize the next button */
+  .slick-next {
+    /* border: 1px solid blue; */
+    right: 40px; /* Move it to the right */
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .slick-next:before {
+    color: #F2F2F2; /* Change arrow color */
+    font-size: 40px;
+  }
+  

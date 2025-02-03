@@ -1,0 +1,35 @@
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.7;
+}
+.custom-arrow i {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+    background-color: grey;
+    border-radius: 50%;
+    color: #F2F2F2;
+  }
+  
+  .custom-prev {
+    left: 20px; /* Adjust position */
+  }
+  
+  .custom-next {
+    right: 20px; /* Adjust position */
+  }
+  
+  .custom-arrow:hover {
+    opacity: 1;
+  }
+
+
+.slick-slide {
+    width: 290px;
+    padding:  0 20px;
+}
+
+
