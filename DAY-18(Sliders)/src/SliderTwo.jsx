@@ -15,7 +15,7 @@ export default function Slider() {
     useEffect(() => {
         axios.get("https://fakestoreapi.com/products")
         .then((res) => {
-            setProductData(res.data[0])
+            setProductData(res.data)
         })
         .catch((err) => {
             console.log(err);
@@ -48,57 +48,34 @@ export default function Slider() {
                 modules={[Navigation]}
                 className="mySwiper"
             >
-                <SwiperSlide>
+                {
+                   productData.map((el) => {
+                     return (<SwiperSlide>
                     <div className="img">
-                        <img src="https://www.bewakoof.com/_next/image?url=https%3A%2F%2Fimages.bewakoof.com%2Ft320%2Fmen-s-chocolate-brown-textured-track-pants-646483-1734504088-1.jpg&w=1920&q=75" alt="" />
+                        <img src={el.image} alt="" />
                         <span>
                             <i className="fa-solid fa-star"></i>
-                            4.4
+                            {el.rating.rate}
                         </span>
                     </div>
                     <div className='pro-overview'>
                         <div className="name">
                             <div>
-                                <h6>{truncateText(productData.title, 35)}</h6>
-                                <span>{truncateText(productData.description, 43)}</span>
+                                <h6>{truncateText(el.title, 35)}</h6>
+                                <span>{truncateText(el.description, 43)}</span>
                             </div>
                             <i className="fa-regular fa-heart"></i>
                         </div>
                         <div className="price">
-                            <p>₹1199</p>
-                            <span className='stricked'><s>₹2699</s></span>
+                            <p>₹{Math.floor((el.price) - (el.price * 0.55))}</p>
+                            <span className='stricked'><s>₹{el.price}</s></span>
                             <span className='discount'>55% OFF</span>
                         </div>
                     </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="img">
-                        <img src="https://www.bewakoof.com/_next/image?url=https%3A%2F%2Fimages.bewakoof.com%2Ft320%2Fmen-s-chocolate-brown-textured-track-pants-646477-1734503952-1.jpg&w=1920&q=75" alt="" />
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="img">
-                        <img src="https://www.bewakoof.com/_next/image?url=https%3A%2F%2Fimages.bewakoof.com%2Ft320%2Fmen-s-charcoal-grey-textured-track-pants-646507-1735621325-1.jpg&w=1920&q=75" alt="" />
-
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="img">
-                        <img src="https://www.bewakoof.com/_next/image?url=https%3A%2F%2Fimages.bewakoof.com%2Ft320%2Fmen-s-black-all-over-printed-pyjamas-642188-1731388265-1.jpg&w=1920&q=75" alt="" />
-
-                    </div>            </SwiperSlide>
-                <SwiperSlide>
-                    <div className="img">
-                        <img src="https://www.bewakoof.com/_next/image?url=https%3A%2F%2Fimages.bewakoof.com%2Ft320%2Fmen-s-charcoal-grey-oversized-cargo-joggers-646496-1735624026-1.jpg&w=1920&q=75" alt="" />
-
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="img">
-                        <img src="https://www.bewakoof.com/_next/image?url=https%3A%2F%2Fimages.bewakoof.com%2Ft320%2Fmen-s-charcoal-grey-oversized-cargo-joggers-646496-1735624026-1.jpg&w=1920&q=75" alt="" />
-
-                    </div>
-                </SwiperSlide>
+                </SwiperSlide>)
+                   })
+                }
+               
             </Swiper>
         </div>
     );
