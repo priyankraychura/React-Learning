@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react'
 import './UsersList.css'
 import { collection, deleteDoc, doc, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
+import EditData from './EditData';
 
 function UsersList() {
+  const [editFrom, setEditForm] = useState(false)
   const [users, setUsers] = useState([])
+  const [editId, setEditId] = useState(null)
   
   const userCollection = collection(db, "users");
 
@@ -29,16 +32,21 @@ function UsersList() {
     getData()
   }
 
+  const handleOnEdit = (id) => {
+    setEditForm(true)
+    setEditId(id)
+  }
     
   return (
     <div>
-      <div className="usersList">
+      { editFrom ? <EditData id={editId} users={users}/> :
+        <div className="usersList">
         <table>
             <thead>
                 <tr>
                 <th>Index</th>
                 <th>Id</th>
-                <th>Useranem</th>
+                <th>Username</th>
                 <th>Email</th>
                 <th>Password</th>
                 <th>Actions</th>
@@ -56,7 +64,7 @@ function UsersList() {
                             <td>{el.password}</td>
                             <td>
                                <div className="actions">
-                               <i class="fa-solid fa-pen-to-square"></i>
+                               <i class="fa-solid fa-pen-to-square" onClick={() => handleOnEdit(el.id)}></i>
                                <i class="fa-solid fa-trash-can" onClick={() => handleOnDelete(el.id)}></i> 
                                </div>
                             </td>
@@ -66,7 +74,7 @@ function UsersList() {
                 }
             </tbody>
         </table>
-      </div>
+      </div>}
     </div>
   )
 }

@@ -60,7 +60,7 @@ export default function Slider() {
                         <div className="name">
                             <div>
                                 <h6>{truncateText(productData.title, 35)}</h6>
-                                <span>Men's Chocolate Brown Textured Oversized...</span>
+                                <span>{truncateText(productData.description, 43)}</span>
                             </div>
                             <i className="fa-regular fa-heart"></i>
                         </div>
