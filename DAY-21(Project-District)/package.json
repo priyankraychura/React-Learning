@@ -1,5 +1,5 @@
 {
-  "name": "localstorage",
+  "name": "day-21-project-district-",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-hot-toast": "^2.5.1"
+    "react-router": "^7.1.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
