@@ -14,8 +14,8 @@ function App() {
       {/* <Slider /> */}
       {/* <FreeMode /> */}
       {/* <SlickSlider /> */}
-      {/* <SlickCarousel /> */}
-      <SliderTwo />
+      <SlickCarousel />
+      {/* <SliderTwo /> */}
     </div>
   )
 }

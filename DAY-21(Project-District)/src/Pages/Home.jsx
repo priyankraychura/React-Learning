@@ -1,7 +1,9 @@
 import React from 'react'
 import '../styles/Home.css'
+import SlickSlider from '../components/Slider'
 
 function Home() {
+    const arr = [1, 2, 3, 4, 5]
     return (
         <div>
             <div className="home-events">
@@ -16,22 +18,30 @@ function Home() {
                     </h4>
                 </div>
                 <div className="home-content">
-                    <div className="card">
-                        <div className="img">
-                            <img src="https://res.cloudinary.com/dwzmsvp7f/image/upload/f_auto,w_400/c_crop%2Cg_custom%2Fv1737631621%2Fnkju6b1q1qc2dtl5glw1.jpg" alt="" />
-                        </div>
-                        <div className="details">
-                            <h5>IDFC FIRST Bank Series 2nd ODI: India vs England - Cuttack</h5>
-                            <div className="location">
-                                <span><i class="fa-solid fa-calendar-check"></i> February 9 | 1:30 pm Onwards</span>
-                                <span><i class="fa-solid fa-location-dot"></i>Barabati Stadium, Cuttack</span>
-                            </div>
-                            <div className="price">
-                                <h6>₹700</h6>
-                                <h6>BOOK NOW</h6>
-                            </div>
-                        </div>
-                    </div>
+                    <SlickSlider>     
+                    {
+                        arr.map((index) => {
+                            return (
+                                <div className="card" key={index}>
+                                    <div className="img">
+                                        <img src="https://res.cloudinary.com/dwzmsvp7f/image/upload/f_auto,w_400/c_crop%2Cg_custom%2Fv1737631621%2Fnkju6b1q1qc2dtl5glw1.jpg" alt="" />
+                                    </div>
+                                    <div className="details">
+                                        <h5>IDFC FIRST Bank Series 2nd ODI: India vs England - Cuttack</h5>
+                                        <div className="location">
+                                            <span><i className="fa-solid fa-calendar-check"></i>  February 9 | 1:30 pm Onwards</span>
+                                            <span><i className="fa-solid fa-location-dot"></i>  Barabati Stadium, Cuttack</span>
+                                        </div>
+                                        <div className="price">
+                                            <h6>₹ 700</h6>
+                                            <h6>BOOK NOW</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
+                </SlickSlider> 
                 </div>
             </div>
         </div>

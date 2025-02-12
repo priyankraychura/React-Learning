@@ -8,6 +8,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding-right: 20px;
+    z-index: 10;
 }
 nav .logo img {
     width: 125px;
@@ -56,8 +57,23 @@ nav ul li.selected {
     background-color: #EBD514AD;
     color: #FAFAFA;
 }
-.fa-circle-user {
-    font-size: 28px;
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.fa-calendar-plus {
+    cursor: pointer;
+}
+nav .fa-user {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Footer */

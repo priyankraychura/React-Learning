@@ -8,7 +8,7 @@ import "./NewSlickSlider.css"; // Import your CSS file
 const CustomPrevArrow = ({ onClick }) => {
   return (
     <div className="custom-arrow custom-prev" onClick={onClick}>
-        <i class="fa-solid fa-circle-chevron-left"></i>
+        <i class="fa-solid fa-chevron-left"></i>
     </div>
   );
 };
@@ -17,7 +17,7 @@ const CustomPrevArrow = ({ onClick }) => {
 const CustomNextArrow = ({ onClick }) => {
   return (
     <div className="custom-arrow custom-next" onClick={onClick}>
-      <i class="fa-solid fa-circle-chevron-right"></i>
+      <i class="fa-solid fa-chevron-right"></i>
     </div>
   );
 };
@@ -28,14 +28,14 @@ const SlickCarousel = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 3,
     slidesToScroll: 5,
     prevArrow: <CustomPrevArrow />, // Use custom left arrow
     nextArrow: <CustomNextArrow />, // Use custom right arrow
 };
 
   return (
-    <div>
+    <div style={{ width: "67%", margin: "auto" }}>
       <h2>Customized Slick Slider</h2>
       <Slider {...settings} >
         <div className="item"><img src="https://www.bewakoof.com/_next/image?url=https%3A%2F%2Fimages.bewakoof.com%2Ft320%2Fmen-s-jet-black-oversized-cargo-jogger-pants-648629-1735623776-1.jpg&w=1920&q=75" alt="Slide 1" /></div>

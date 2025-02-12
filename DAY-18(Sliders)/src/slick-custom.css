@@ -9,7 +9,7 @@
 
 .slick-prev:before {
     color: #F2F2F2;  /* Change arrow color */
-    font-size: 40px;
+    font-size: 30px;
   }
   
   /* Customize the next button */
@@ -23,6 +23,6 @@
   
   .slick-next:before {
     color: #F2F2F2; /* Change arrow color */
-    font-size: 40px;
+    font-size: 30px;
   }
   
