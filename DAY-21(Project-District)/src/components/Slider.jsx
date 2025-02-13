@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Slider.css"; // Import your CSS file
 
@@ -8,7 +8,7 @@ import "./Slider.css"; // Import your CSS file
 const CustomPrevArrow = ({ onClick }) => {
   return (
     <div className="custom-arrow custom-prev" onClick={onClick}>
-        <i className="fa-solid fa-chevron-left"></i>
+      <i className="fa-solid fa-chevron-left"></i>
     </div>
   );
 };
@@ -32,7 +32,7 @@ const SlickSlider = ({ children }) => {
     slidesToScroll: 1,
     prevArrow: <CustomPrevArrow />, // Use custom left arrow
     nextArrow: <CustomNextArrow />, // Use custom right arrow
-};
+  };
 
   return (
     <div style={{ width: "67%", margin: "auto" }}>

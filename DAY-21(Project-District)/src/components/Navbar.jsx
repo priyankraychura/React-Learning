@@ -2,6 +2,7 @@ import React from 'react'
 import './Navbar.css'
 import logo from '../assets/logo.png'
 import { Link } from 'react-router'
+import { Toaster } from 'react-hot-toast';
 
 function Navbar() {
   return (
@@ -22,6 +23,12 @@ function Navbar() {
           <i className="fa-regular fa-user"></i>
         </div>
       </nav>
+      <div>
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+        />
+      </div>
     </div>
   )
 }

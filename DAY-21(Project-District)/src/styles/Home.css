@@ -92,7 +92,39 @@
 	border: 1px solid white;
 }
 .card .img {
+	position: relative;
 	height: 383px;
+}
+.img:hover .admin-actions {
+	display: flex;
+}
+.img .admin-actions {
+	display: none;
+	position: absolute;
+	width: 100%;
+	/* display: flex; */
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px 10px;
+	height: 60px;
+	/* border: 1px solid white; */
+}
+.fa-pen-to-square {
+	color: rgb(58, 9, 173);
+}
+.fa-trash-can {
+	color: rgba(206, 10, 10, 0.782);
+}
+.fa-pen-to-square, .fa-trash-can {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* border: 1px solid grey; */
+	background-color: rgba(255, 255, 255, 0.563);
+	width: 35px;
+	height: 35px;
+	border-radius: 30%;
 }
 .img img {
 	width: 100%;

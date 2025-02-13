@@ -9,6 +9,7 @@ function MainRoute() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/add-event' element={<AddEvent />}></Route>
+        <Route path='/add-event/:id' element={<AddEvent />}></Route>
       </Routes>
     </div>
   )
