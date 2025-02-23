@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const GITHUB_USERNAME = "priyankraychura";
-const TOKEN = "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";
+const TOKEN = "";
 
 const ApiFetch = () => {
     const [repos, setRepos] = useState([]);
