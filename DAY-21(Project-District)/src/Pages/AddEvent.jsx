@@ -6,6 +6,10 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Link, replace, useNavigate, useParams } from 'react-router';
 import toast from 'react-hot-toast';
+import Select from '@mui/material/Select';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
 
 function AddEvent() {
     const [formData, setFormData] = useState({
@@ -14,7 +18,8 @@ function AddEvent() {
         time: "",
         img: "",
         location: "",
-        price: ""
+        price: "",
+        type: "",
     });
     let navigator = useNavigate()
     const { id } = useParams();
@@ -69,6 +74,9 @@ function AddEvent() {
             price: ""
         })
     }
+
+    console.log(formData);
+    
 
     return (
         <div>
@@ -133,6 +141,21 @@ function AddEvent() {
                                     id="outlined-start-adornment"
                                     sx={{ m: 1, mb: 3, width: '25ch' }}
                                 />
+                                <FormControl>
+                                    <InputLabel sx={{ m: 1, mb: 3, width: '25ch' }} id="demo-simple-select-label">Age</InputLabel>
+                                    <Select
+                                        labelId="demo-simple-select-label"
+                                        id="demo-simple-select"
+                                        value={formData.type}
+                                        label="Age"
+                                        sx={{ m: 1, mb: 3, width: '25ch' }}
+                                        onChange={(e) => setFormData({...formData, type: e.target.value})}
+                                    >
+                                        <MenuItem value="events">Events</MenuItem>
+                                        <MenuItem value="movies">Movies</MenuItem>
+                                        <MenuItem value="dining">Dining</MenuItem>
+                                    </Select>
+                                </FormControl>
                             </div>
                             <div>
                                 <Link to={'/'}><Button variant="outlined" size="large" color='error' sx={{ m: 1, width: '46ch' }}>Cancel</Button></Link>

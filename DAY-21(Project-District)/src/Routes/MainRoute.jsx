@@ -3,11 +3,11 @@ import { Route, Routes } from 'react-router'
 import Home from '../Pages/Home'
 import AddEvent from '../Pages/AddEvent'
 
-function MainRoute() {
+function MainRoute({eventData}) {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<Home />}></Route>
+        <Route path='/' element={<Home eventData={eventData}/>}></Route>
         <Route path='/add-event' element={<AddEvent />}></Route>
         <Route path='/add-event/:id' element={<AddEvent />}></Route>
       </Routes>

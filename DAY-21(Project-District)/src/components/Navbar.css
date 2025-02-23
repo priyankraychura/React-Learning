@@ -22,6 +22,7 @@ nav ul {
     /* border: 1px solid white; */
 }
 nav ul li {
+    cursor: pointer;
     font-size: 16px;
     font-weight: 700;
     width: 320px;
@@ -35,6 +36,15 @@ nav ul li {
     align-items: center;
     justify-content: center;
     gap: 10px;
+}
+nav ul .search {
+    width: 90%;
+    height: 80%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    background-color: transparent;
 }
 nav ul li i {
     font-size: 17px;
