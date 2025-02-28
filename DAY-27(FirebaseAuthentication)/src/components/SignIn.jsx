@@ -32,8 +32,8 @@ export default function SignIn() {
         <input type="text" name='email' onChange={handleOnChange} placeholder='Email'/>
         <label htmlFor="">Password</label>
         <input type="text" name='password' onChange={handleOnChange} placeholder='Password'/>
-        <button>SignIn</button>
-        <Link to={"/"}>SignUp</Link>
+        <button className='btn'>SignIn</button>
+        <Link to={"/"}>Don't have an account? SignUp</Link>
       </form>
     </div>
   )
