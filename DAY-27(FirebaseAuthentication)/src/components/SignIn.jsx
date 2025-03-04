@@ -2,6 +2,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router';
 import { auth } from '../../firebaseConfig';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function SignIn() {
   const [formData, setFormData] = useState({
@@ -20,6 +21,7 @@ export default function SignIn() {
 
     await signInWithEmailAndPassword(auth, formData.email, formData.password)
     .then((res) =>{
+      toast.success('Logged in successfully!')
       navigate('/dashboard');
     })
   }

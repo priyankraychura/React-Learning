@@ -1,7 +1,9 @@
 import React from 'react'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
-import { auth } from '../../firebaseConfig';
+import { auth, db } from '../../firebaseConfig';
 import { Link, useNavigate } from 'react-router';
+import toast from 'react-hot-toast';
+import { doc, setDoc } from 'firebase/firestore';
 
 export default function SignUp() {
   const [formData, setFormData] = React.useState({
@@ -21,7 +23,12 @@ export default function SignUp() {
 
     await createUserWithEmailAndPassword(auth, formData.email, formData.password)
     .then((res) =>{
-      navigate('/dashboard');
+      setDoc(doc(db, 'users', res.user.uid), {...formData})
+        toast.success(`Rregistration successful!`)
+        navigate('/dashboard');
+    })
+    .catch((err) => {
+      toast.error(err.message);
     })
   }
   
