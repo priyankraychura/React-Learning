@@ -2,18 +2,22 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Create from './componenet/Create'
+import Navbar from './componenet/Navbar'
 import { Provider } from 'react-redux'
-import ReduxCounter from './components/ReduxCounter'
-import { Store } from './App/Store'
+import { store } from './app/Store'
+import Show from './componenet/Show'
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <>
-      <Provider store={Store}>
-        <ReduxCounter />
-      </Provider>
+    <Provider store={store}>
+    <Navbar></Navbar>
+     <Create></Create>
+     <Show></Show>
+     </Provider>
     </>
   )
 }

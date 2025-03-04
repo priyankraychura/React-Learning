@@ -1,8 +1,7 @@
-import { configureStore } from "@reduxjs/toolkit";
-import counter from "../features/Slice";
-
-export const Store = configureStore({
-    reducer : {
-        counterReducer: counter
-    }
-});
+import {configureStore} from '@reduxjs/toolkit'
+import crudslice  from '../features/crudSlice'
+export const store = configureStore({
+   reducer : {
+      app : crudslice
+   }
+})
