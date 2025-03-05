@@ -55,17 +55,17 @@ export default function Dashboard() {
       .then((res) => {
         let data = res.docs.map((el, i) => {
           return { id: el.id, ...el.data() }
-        })
+        }).filter((el) => el.userId === uid);
         setLocalRecord(data);
       })
   }
 
-  const deleteTask = async (id) => {    
+  const deleteTask = async (id) => {
     await deleteDoc(doc(db, 'tasks', id))
       .then((res) => {
         console.log(res);
-        
         setLocalRecord(localData.filter((el) => el.id !== id));
+        toast.success('Task Deleted!')
       })
   }
 
@@ -83,16 +83,18 @@ export default function Dashboard() {
   const handleOnSubmit = async (e) => {
     e.preventDefault();
 
-    if(editIndex == null) {
+    if (editIndex == null) {
       await addDoc(collection(db, 'tasks'), { userId: uid, ...record })
-      .then((res) => {
-        setLocalRecord([...localData, { id: res.id, ...record }]);
-      })
+        .then((res) => {
+          setLocalRecord([...localData, { id: res.id, ...record }]);
+          toast.success('Task Added!')
+        })
     } else {
       await updateDoc(doc(db, 'tasks', editIndex), record)
-      .then((res) => {
-        fetchRecords();
-      })
+        .then((res) => {
+          fetchRecords();
+          toast.success('Task Updated!')
+        })
     }
 
     setRecord({ task: '', priority: '' });
@@ -115,27 +117,27 @@ export default function Dashboard() {
               <h2>Tasks</h2>
               <table>
                 <thead>
-                <tr>
-                  <th>No.</th>
-                  <th>Task</th>
-                  <th>Priority</th>
-                  <th>Action</th>
-                </tr>
+                  <tr>
+                    <th>No.</th>
+                    <th>Task</th>
+                    <th>Priority</th>
+                    <th>Action</th>
+                  </tr>
                 </thead>
                 <tbody>
-                {localData.map((el, i) => {
-                  return (
-                  <tr key={el.id}>
-                    <td>{i + 1}</td>
-                    <td>{el.task}</td>
-                    <td>{el.priority}</td>
-                    <td className='action'>
-                      <i onClick={() => deleteTask(el.id)} className="fa-solid fa-xmark"></i>
-                      <i onClick={() => updateTask(el.id)} className="fa-solid fa-pencil"></i>
-                    </td>
-                  </tr>
-                  )
-                })}
+                  {localData.map((el, i) => {
+                    return (
+                      <tr key={el.id}>
+                        <td>{i + 1}</td>
+                        <td>{el.task}</td>
+                        <td>{el.priority}</td>
+                        <td className='action'>
+                          <i onClick={() => deleteTask(el.id)} className="fa-solid fa-xmark"></i>
+                          <i onClick={() => updateTask(el.id)} className="fa-solid fa-pencil"></i>
+                        </td>
+                      </tr>
+                    )
+                  })}
                 </tbody>
 
               </table>
