@@ -25,9 +25,42 @@ form input {
   outline: none;
   border-radius: 8px;
 }
+form select {
+  padding: 0 10px;
+  height: 40px;
+  width: 320px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
 form .btn {
   margin-top: 20px;
 }
 .loader {
   margin-left: 100px;
+}
+.main {
+  display: flex;
+  gap: 40px;
+}
+.main .task-list {
+  padding: 20px 40px;
+  border-radius: 40px;
+  background-color: #383838;
+}
+table tr td{
+  text-align: left;
+  padding: 10px;
+}
+.action {
+  display: flex;
+  gap: 20px;
+}
+.action .fa-xmark {
+  color: rgba(224, 94, 83, 0.793);
+  cursor: pointer;
+}
+.action .fa-pencil {
+  color: rgba(49, 108, 245, 0.618);
+  cursor: pointer;
 }
