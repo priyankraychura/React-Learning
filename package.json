@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "@sweetalert2/theme-borderless": "^5.0.26",
-    "@sweetalert2/theme-dark": "^5.0.26",
-    "sweetalert": "^2.1.2",
-    "sweetalert-react": "^0.4.11",
-    "sweetalert2": "^11.15.10"
-  }
-}

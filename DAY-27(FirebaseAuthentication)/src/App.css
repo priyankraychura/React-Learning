@@ -64,3 +64,9 @@ table tr td{
   color: rgba(49, 108, 245, 0.618);
   cursor: pointer;
 }
+.gbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}

@@ -1,7 +1,7 @@
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router';
-import { auth } from '../../firebaseConfig';
+import { auth, provider } from '../../firebaseConfig';
 import toast, { Toaster } from 'react-hot-toast';
 
 export default function SignIn() {
@@ -26,6 +26,15 @@ export default function SignIn() {
     })
   }
 
+  const handleGoogleSingin = async () => {
+    await signInWithPopup(auth, provider)
+      .then((res) => {
+        const user = res.user.providerData[0]
+        toast.success(`Logged in successfully!`)
+        navigate('/dashboard');
+      })
+  }
+
   return (
     <div>
       <form action="" onSubmit={handleOnSubmit}>
@@ -35,6 +44,10 @@ export default function SignIn() {
         <label htmlFor="">Password</label>
         <input type="text" name='password' onChange={handleOnChange} placeholder='Password'/>
         <button className='btn'>SignIn</button>
+        <button className='gbtn' onClick={handleGoogleSingin}>
+          <i className="fa-brands fa-google"></i>
+          Continue with Google
+        </button>
         <Link to={"/"}>Don't have an account? SignUp</Link>
       </form>
     </div>
