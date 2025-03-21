@@ -12,12 +12,16 @@ export default function MainRoutes() {
     <div>
       <Routes>
         <Route path='/' Component={Login}></Route>
-        <Route path='dashboard' element={
+        <Route path='/dashboard' element={
           <PrivateRoutes>
-            <Home />
+            <Dashboard />
           </PrivateRoutes>
         }></Route>
-        <Route path='add-product' Component={AddProduct}></Route>
+        <Route path='add-product' element={
+          <PrivateRoutes>
+            <AddProduct />
+          </PrivateRoutes>
+        }></Route>
         <Route path='signup' Component={SignUp}></Route>
         <Route></Route>
       </Routes>

@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/Navbar.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function Navbar() {
+  const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(JSON.parse(localStorage.getItem('isLoggedin')) || false);
+
   const handleLogout = () => {
     localStorage.removeItem("isLoggedin")
     localStorage.removeItem("userId")
+    navigate("/");
   }
 
   return (
@@ -19,9 +23,9 @@ export default function Navbar() {
           <li><Link to={'/dashboard'}>ListProduct</Link></li>
         </ul>
         <ul className='right-nav'>
-          <li><Link onClick={handleLogout}>Logout</Link></li>
+          <li style={{ cursor: "pointer" }}><a onClick={handleLogout}>Logout</a></li>
         </ul>
       </nav>
-    </div>
+    </div >
   )
 }
