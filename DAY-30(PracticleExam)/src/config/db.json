@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": "71c7",
+      "title": "L'Absolu Rouge Cream Lipstick",
+      "price": "3200",
+      "img": "https://www.lancome.in/dw/image/v2/BJSQ_PRD/on/demandware.static/-/Sites-lancome-ng-master-catalog/default/dw20a89add/images/new-packshot/Lips/l-absolu-rouge-cream-lipstick-lips-3614273307017-lancom-makeup.jpg?sw=540&sh=540&sm=cut&sfrm=jpg&q=70",
+      "cat": "women"
+    },
+    {
+      "id": "bc59",
+      "title": "Teint Idôle Ultra Wear Waterproof Foundation",
+      "price": "4200",
+      "img": "https://www.lancome.in/dw/image/v2/BJSQ_PRD/on/demandware.static/-/Sites-lancome-ng-master-catalog/en_IN/dw4c00a268/images/PACKSHOTS/MAKEUP/face/TIUW-Foundation/lan_dmi_maky_teint-idole-ultra-wear-230w_3614273792516_packshot-front-with-background_1x1_vi.jpg?sw=1080&sh=1080&sm=cut&sfrm=jpg&q=70",
+      "cat": "women"
+    }
+  ],
+  "users": []
+}
